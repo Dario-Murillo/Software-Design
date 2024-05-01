@@ -1,0 +1,7 @@
+Resultados de tiempo con la clase LogSimple:
+
+671 milisegundos
+
+Resultados de tiempo con la clase LogSingleton:
+
+102 milisegundos
