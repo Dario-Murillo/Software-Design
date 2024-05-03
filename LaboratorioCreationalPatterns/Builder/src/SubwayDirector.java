@@ -10,5 +10,6 @@ public class SubwayDirector {
     foodBuilder.BuildSauce();
     foodBuilder.BuildVegetables();
     foodBuilder.BuildSpices();
+    foodBuilder.setQuantity();
   }
 }
