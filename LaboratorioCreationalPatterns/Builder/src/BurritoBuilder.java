@@ -10,7 +10,7 @@ public class BurritoBuilder extends FoodBuilder {
     }
 
     @Override
-        protected void BuildBase() {
+    protected void BuildBase() {
         System.out.println("Eliga el tipo de tortilla:\na.Trigo\nb.Integral\nc.Maiz\nd.Harina");
         String input = myScanner.nextLine();
         String base = "";
