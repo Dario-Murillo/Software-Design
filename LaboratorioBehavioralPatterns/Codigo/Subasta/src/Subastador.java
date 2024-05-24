@@ -1,21 +1,22 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Subastador {
-    private LicitadorDeAntiguedades licitadorDeAntiguedades;
-    private LicitadorInteresadoEnBlog blogger;
-    private LicitadorInteresadoEnPromedio promediador;
+    private List<Licitador> licitadores = new ArrayList<Licitador>();
 
-    public Subastador(LicitadorDeAntiguedades licitadorDeAntiguedades, LicitadorInteresadoEnBlog blogger, LicitadorInteresadoEnPromedio promediador) {
-        this.licitadorDeAntiguedades = licitadorDeAntiguedades;
-        this.blogger = blogger;
-        this.promediador = promediador;
+    public void attach(Licitador licitador) {
+        licitadores.add(licitador);
     }
 
-    public void nuevaOfertaAceptada(Oferta oferta) {
-        licitadorDeAntiguedades.recibirActualizacion(oferta);
-        blogger.recibirActualizacion(oferta);
-        promediador.recibirActualizacion(oferta);
+    public void detach(Licitador licitador) {
+        licitadores.remove(licitador);
     }
 
-    public void recibirOferta(Oferta oferta) {
-        nuevaOfertaAceptada(oferta);
+    public void notify(Oferta oferta) {
+        for (Licitador licitador : licitadores) {
+            licitador.update(oferta);
+        }
+        System.out.println("");
     }
+
 }
