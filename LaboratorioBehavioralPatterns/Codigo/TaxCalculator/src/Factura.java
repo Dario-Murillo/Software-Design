@@ -6,30 +6,15 @@ public class Factura {
     private ImpresionService impresion = new ImpresionService();
     private List<Item> items = new ArrayList<>();
     private int total;
-    private Pais pais;
+    private TaxStrategy strategy;
 
-    public Factura(Pais pais) {
-        this.pais = pais;
+    public Factura(TaxStrategy strategy) {
+        this.strategy = strategy;
     }
 
     public double getImpuesto() {
-        double porcentajeImpuesto = 0;
-
-        switch (pais) {
-            case USA:
-                porcentajeImpuesto = 0.05;
-                break;
-
-            case UK:
-                porcentajeImpuesto = 0.07;
-                break;
-
-            case CostaRica:
-                porcentajeImpuesto = 0.13;
-                break;
-        }
-
-        return porcentajeImpuesto * total;
+        double porcentajeImpuesto = strategy.Tax(total);
+        return porcentajeImpuesto;
     }
 
     public List<Item> getItems() {

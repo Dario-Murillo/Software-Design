@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Factura facturaCR = new Factura(Pais.CostaRica);
+        Factura facturaCR = new Factura(new CostaRicaTax());
         facturaCR.addItem(new Item("Uvas", 10, 10));
         facturaCR.addItem(new Item("Bananos", 5, 5));
         facturaCR.addItem(new Item("Manzanas", 8, 100));
@@ -8,7 +8,7 @@ public class App {
         facturaCR.imprimir();
         System.out.println();
 
-        Factura facturaUSA = new Factura(Pais.USA);
+        Factura facturaUSA = new Factura(new USATax());
         facturaUSA.addItem(new Item("Uvas", 10, 10));
         facturaUSA.addItem(new Item("Bananos", 5, 5));
         facturaUSA.addItem(new Item("Manzanas", 8, 100));
@@ -16,14 +16,13 @@ public class App {
         facturaUSA.imprimir();
         System.out.println();
 
-        Factura facturaUK = new Factura(Pais.UK);
+        Factura facturaUK = new Factura(new UKTax());
         facturaUK.addItem(new Item("Uvas", 10, 10));
         facturaUK.addItem(new Item("Bananos", 5, 5));
         facturaUK.addItem(new Item("Manzanas", 8, 100));
 
         facturaUK.imprimir();
 
-        // To keep the console window open until user input
-        new java.util.Scanner(System.in).nextLine();
+
     }
 }
