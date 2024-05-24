@@ -11,7 +11,7 @@ public class MovingState extends State {
 
   @Override
   public String muevase() {
-    result = String.format("%s ya está moviendo...", personaje.getNombre());
+    result = String.format("%s ya se está moviendo...", personaje.getNombre());
     StateChangeCheck();
     return result;
   }
