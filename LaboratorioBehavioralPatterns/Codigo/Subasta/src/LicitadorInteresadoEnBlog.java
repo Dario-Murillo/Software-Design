@@ -1,3 +1,8 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
+
 public class LicitadorInteresadoEnBlog implements Licitador {
     @Override
     public void update(Oferta oferta) {
