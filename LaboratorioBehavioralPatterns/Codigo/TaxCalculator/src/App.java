@@ -1,3 +1,8 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
+
 public class App {
     public static void main(String[] args) throws Exception {
         Factura facturaCR = new Factura(new CostaRicaTax());
@@ -22,7 +27,6 @@ public class App {
         facturaUK.addItem(new Item("Manzanas", 8, 100));
 
         facturaUK.imprimir();
-
 
     }
 }

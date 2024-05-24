@@ -1,3 +1,7 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
 
 public class UKTax extends TaxStrategy {
 
@@ -5,5 +9,4 @@ public class UKTax extends TaxStrategy {
   public double Tax(double total) {
     return total * 0.13;
   }
-  
 }
