@@ -1,3 +1,8 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
+
 import java.util.Arrays;
 
 public class RemoteControl {
@@ -5,8 +10,8 @@ public class RemoteControl {
     private Command[] offCommands;
 
     public RemoteControl() {
-        onCommands = new Command[7];
-        offCommands = new Command[7];
+        onCommands = new Command[8];
+        offCommands = new Command[8];
 
         Command noCommand = new NoCommand();
         Arrays.fill(onCommands, noCommand);

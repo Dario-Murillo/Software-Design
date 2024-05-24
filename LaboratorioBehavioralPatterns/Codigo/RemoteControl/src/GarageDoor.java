@@ -1,3 +1,7 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
 public class GarageDoor {
     public String up() {
         return "Garage door is up";
