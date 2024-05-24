@@ -30,11 +30,32 @@ public class App {
         System.out.printf(" executing off button [3] click\n");
         System.out.printf(remote.offButtonWasPushed(3));
 
-        remote.setCommand(3, new StereoOnCommand(new Stereo("dormitorio")), new StereoOffCommand(new Stereo("dormitorio")));
+        remote.setCommand(4, new StereoOnCommand(new Stereo("sala")), new StereoOffCommand(new Stereo("sala")));
         System.out.printf(remote.toString());
-        System.out.printf(" executing on button [3] click\n");
-        System.out.printf(remote.onButtonWasPushed(3));
-        System.out.printf(" executing off button [3] click\n");
-        System.out.printf(remote.offButtonWasPushed(3));
+        System.out.printf(" executing on button [4] click\n");
+        System.out.printf(remote.onButtonWasPushed(4));
+        System.out.printf(" executing off button [4] click\n");
+        System.out.printf(remote.offButtonWasPushed(4));
+
+        remote.setCommand(5, new LightOnCommand(new Light("cuarto")), new LightOffCommand(new Light("cuarto")));
+        System.out.printf(remote.toString());
+        System.out.printf(" executing on button [5] click\n");
+        System.out.printf(remote.onButtonWasPushed(5));
+        System.out.printf(" executing off button [5] click\n");
+        System.out.printf(remote.offButtonWasPushed(5));
+
+        remote.setCommand(6, new LightOnCommand(new Light("jardin")), new LightOffCommand(new Light("jardin")));
+        System.out.printf(remote.toString());
+        System.out.printf(" executing on button [6] click\n");
+        System.out.printf(remote.onButtonWasPushed(6));
+        System.out.printf(" executing off button [6] click\n");
+        System.out.printf(remote.offButtonWasPushed(6));
+
+        remote.setCommand(7, new StereoOnCommand(new Stereo("cine")), new StereoOffCommand(new Stereo("cine")));
+        System.out.printf(remote.toString());
+        System.out.printf(" executing on button [7] click\n");
+        System.out.printf(remote.onButtonWasPushed(7));
+        System.out.printf(" executing off button [7] click\n");
+        System.out.printf(remote.offButtonWasPushed(7));
     }
 }
