@@ -1,3 +1,8 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
+
 public class MovingState extends State {
 
   public MovingState(State state) {
@@ -52,13 +57,12 @@ public class MovingState extends State {
   }
 
   private void StateChangeCheck() {
-    if(estadoActual == DESCANSANDO) {
+    if (estadoActual == DESCANSANDO) {
       personaje.setState(new RestingState(this));
-    }else if( estadoActual == ENPANICO) {
+    } else if ( estadoActual == ENPANICO) {
       personaje.setState(new PanicState(this));
-    }else if (estadoActual == ATACANDO) {
+    } else if (estadoActual == ATACANDO) {
       personaje.setState(new AttackState(this));
     }
   }
-  
 }

@@ -1,6 +1,11 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
+
 import java.util.Random;
 
-public class AttackState extends State{
+public class AttackState extends State {
 
   public AttackState(State state) {
     this.personaje = state.getPersonaje();
@@ -49,13 +54,12 @@ public class AttackState extends State{
   }
 
   private void StateChangeCheck() {
-    if(estadoActual == DESCANSANDO) {
-      personaje.setState(new RestingState(this));
-    }else if( estadoActual == MOVIENDOSE) {
-      personaje.setState(new MovingState(this));
-    }else if (estadoActual == ENPANICO) {
-      personaje.setState(new PanicState(this));
+    if (estadoActual == DESCANSANDO) {
+      personaje.setState (new RestingState(this));
+    } else if ( estadoActual == MOVIENDOSE) {
+      personaje.setState (new MovingState(this));
+    } else if (estadoActual == ENPANICO) {
+      personaje.setState (new PanicState(this));
     }
   }
-  
 }

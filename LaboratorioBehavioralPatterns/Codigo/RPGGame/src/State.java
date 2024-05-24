@@ -1,3 +1,8 @@
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
+
 public abstract class State {
   protected static final int DESCANSANDO = 0;
   protected static final int MOVIENDOSE = 1;

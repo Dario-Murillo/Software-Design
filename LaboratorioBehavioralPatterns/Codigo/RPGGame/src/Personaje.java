@@ -1,4 +1,8 @@
-import java.util.Random;
+/*
+ * Dario Murillo Chaverri C15406
+ * José Fabián Guzmán González C23660 
+ */
+
 
 public class Personaje {
     private State state;
