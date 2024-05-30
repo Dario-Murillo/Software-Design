@@ -43,14 +43,18 @@ public class AttackState extends State {
 
   @Override
   public String entreEnPanico() {
+    estadoActual = ENPANICO;
+    result = String.format("%s entro en pánico!!!...", personaje.getNombre());
     StateChangeCheck();
-    return "";
+    return result;
   }
 
   @Override
   public String calmese() {
+    estadoActual = DESCANSANDO;
+    result = String.format("%s se tranquilizo y ahora esta descansando...", personaje.getNombre());
     StateChangeCheck();
-    return "";
+    return result;
   }
 
   private void StateChangeCheck() {

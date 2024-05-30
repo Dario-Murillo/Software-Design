@@ -45,8 +45,10 @@ public class RestingState extends State {
 
   @Override
   public String entreEnPanico() {
+    estadoActual = ENPANICO;
+    result = String.format("%s entro en pánico!!!...", personaje.getNombre());
     StateChangeCheck();
-    return "";
+    return result;
   }
 
   @Override

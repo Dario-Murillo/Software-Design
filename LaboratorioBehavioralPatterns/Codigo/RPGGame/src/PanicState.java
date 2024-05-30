@@ -40,14 +40,16 @@ public class PanicState extends State {
 
   @Override
   public String entreEnPanico() {
+    result = String.format("%s ya se encuentra en pánico!!!", personaje.getNombre());
     StateChangeCheck();
-    return "";
+    return result;
   }
 
   @Override
   public String calmese() {
+    result = String.format("%s no puede calmarse,ya que, se encuentra en pánico!!!", personaje.getNombre());
     StateChangeCheck();
-    return "";
+    return result;
   }
 
   private void StateChangeCheck() {
