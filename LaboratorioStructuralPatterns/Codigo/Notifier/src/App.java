@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         String message;
-        var logAnalyze = new LogAnalyzer(new Notifier());
+        var logAnalyze = new LogAnalyzer(new SlackNotifier(new MsmNotifier(new FacebookNotifier())));
         do {
             System.out.print("Enter a string (type 'exit' to finish): ");
             message = scanner.nextLine();
