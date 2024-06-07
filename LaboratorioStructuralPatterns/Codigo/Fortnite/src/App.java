@@ -10,16 +10,15 @@ public class App {
         goku.attack(blackKnight);
         goku.attack(blackKnight);
 
-
+    
         var spiderGwen = new SpiderGwen(100);
         spiderGwen.attack(goku);
 
-        var mario = new Mario();
-        // mario.jumpAttack() // ???
-        // mario.attach(spiderGwen); ????
-        // mario.attach(spiderGwen); ????
-        // mario.attach(spiderGwen); ????
-        // mario.attach(spiderGwen); ????
-        // mario.attach(spiderGwen); ????
+        var mario = new MarioAdaptador(100);
+        mario.attack(spiderGwen);
+        mario.attack(spiderGwen);
+        mario.attack(spiderGwen);
+        mario.attack(spiderGwen);
+
     }
 }
