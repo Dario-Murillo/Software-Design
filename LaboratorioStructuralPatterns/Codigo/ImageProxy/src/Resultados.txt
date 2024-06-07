@@ -1,0 +1,9 @@
+Resultados sin proxy:
+
+- Cargando las imagenes sin proxy duró 15031 milisegundos.
+
+Resultados con proxy:
+
+- Cargando las imagenes con proxy duró 0 milisegundos.
+- Mostrando la imagen sample/veryHighResPhoto1.jpeg en alta resolución
+- Mostrando la imagen 1 duró 5018 milisegundos.
